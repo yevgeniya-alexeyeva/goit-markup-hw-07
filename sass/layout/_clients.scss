@@ -1,0 +1,47 @@
+.clients-section {
+  padding: 94px 0px;
+}
+.clients-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.172;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: $title-color;
+}
+.clients-list {
+  display: flex;
+  margin-top: 50px;
+}
+.clients-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: border-color 250ms $timing-function;
+
+  width: 170px;
+  height: 90px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+.clients-item:not(:last-child) {
+  margin-right: 30px;
+}
+.clients-link:hover,
+.clients-link:focus {
+  border-color: $accent-color;
+}
+.client-icon {
+  transition: fill 250ms $timing-function;
+
+  fill: $icon-color;
+}
+
+.clients-link:hover > .client-icon {
+  fill: $accent-color;
+}
+.clients-link:focus > .client-icon {
+  fill: $accent-color;
+}
