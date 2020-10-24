@@ -26,11 +26,11 @@
 
 .servises-description {
   position: absolute;
-  display: flex;
+
+  @extend %flex-a-j;
+
   left: 0;
   bottom: 0;
-  align-items: center;
-  justify-content: center;
 
   width: 100%;
   height: 70px;

@@ -98,9 +98,7 @@
 }
 .subcripe-button {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend %flex-a-j;
   width: 200px;
   height: 50px;
 

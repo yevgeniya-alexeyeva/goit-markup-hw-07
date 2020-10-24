@@ -6,8 +6,7 @@ header {
   justify-content: space-between;
 }
 .site-nav {
-  display: flex;
-  align-items: center;
+  @extend %flex-a;
 }
 
 .navigation-link {
@@ -16,7 +15,7 @@ header {
   padding-top: 30px;
   padding-bottom: 30px;
 
-  transition: color 250ms $timing-function;
+  @include transition(color);
 
   font-weight: 500;
   font-size: 14px;
@@ -53,12 +52,11 @@ header {
 /* Contacts-in-header */
 
 .header-contacts {
-  display: flex;
-  align-items: center;
+  @extend %flex-a;
   padding-top: 30px;
   padding-bottom: 30px;
 
-  transition: color 250ms $timing-function;
+  @include transition(color);
 
   font-weight: 500;
   font-size: 14px;
@@ -70,8 +68,7 @@ header {
     align-items: center;
   }
   &-item {
-    display: flex;
-    align-items: center;
+    @extend %flex-a;
     &:not(:last-child) {
       margin-right: 50px;
     }

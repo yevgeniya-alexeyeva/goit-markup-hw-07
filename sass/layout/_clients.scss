@@ -15,11 +15,9 @@
   margin-top: 50px;
 }
 .clients-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend %flex-a-j;
 
-  transition: border-color 250ms $timing-function;
+  @include transition(border-color);
 
   width: 170px;
   height: 90px;
@@ -35,7 +33,7 @@
 }
 
 .client-icon {
-  transition: fill 250ms $timing-function;
+  @include transition(fill);
 
   fill: $icon-color;
   .clients-link:hover > & {
