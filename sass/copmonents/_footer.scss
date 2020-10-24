@@ -6,9 +6,6 @@
   display: inline-block;
 }
 
-.logo-in-footer {
-  color: $hero-color;
-}
 .company-adress {
   font-weight: 400;
   font-size: 14px;
@@ -117,6 +114,13 @@
 
   letter-spacing: 0.06em;
   color: $hero-color;
+  &:focus {
+    outline-color: $accent-color;
+    background-color: $accent-color-dark;
+  }
+  &:hover {
+    background-color: $accent-color-dark;
+  }
 }
 .send-icon {
   margin-left: 10px;

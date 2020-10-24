@@ -37,10 +37,11 @@
   background-color: $hero-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(1.5);
+  }
 }
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(1.5);
-}
+
 .close-button {
   position: absolute;
   top: 8px;
@@ -62,11 +63,11 @@
 }
 .close-icon {
   fill: $title-color;
-}
-.close-button:hover .close-icon,
-.close-button:focus .close-icon {
-  fill: $accent-color;
-  outline-color: rgba(0, 0, 0, 0.1);
+  .close-button:hover &,
+  .close-button:focus & {
+    fill: $accent-color;
+    outline-color: rgba(0, 0, 0, 0.1);
+  }
 }
 
 .contact-form-capture {
@@ -119,11 +120,11 @@
 
   transition: border-color 250ms $timing-function,
     outline-color 250ms $timing-function;
-}
-.input-field:hover,
-.input-field:focus {
-  outline: none;
-  border-color: $accent-color;
+  &:hover,
+  &:focus {
+    outline: none;
+    border-color: $accent-color;
+  }
 }
 
 .contact-form-icon {
@@ -133,14 +134,14 @@
   transform: translateY(-50%);
   fill: $title-color;
   transition: fill 250ms $timing-function;
+  .input-field:hover + & {
+    fill: $accent-color;
+  }
+  .input-field:focus + & {
+    fill: $accent-color;
+  }
 }
 
-.input-field:hover + .contact-form-icon {
-  fill: $accent-color;
-}
-.input-field:focus + .contact-form-icon {
-  fill: $accent-color;
-}
 .comment-wraper {
   margin-bottom: 20px;
 
@@ -164,11 +165,12 @@
 
   transition: border-color 250ms $timing-function,
     outline-color 250ms $timing-function;
+  &:hover,
+  &:focus {
+    border-color: $accent-color;
+  }
 }
-.comment-field:hover,
-.comment-field:focus {
-  border-color: $accent-color;
-}
+
 .agreement-label {
   display: inline-block;
   text-align: center;
@@ -182,6 +184,25 @@
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 30px;
+  &::before {
+    display: inline-block;
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 16px;
+    height: 15px;
+    border: 2px solid #000000;
+    border-radius: 2px;
+    transition: border-color 250ms $timing-function,
+      background-color 250ms $timing-function;
+    .checkbox:checked + & {
+      background-color: $accent-color;
+      border-color: $accent-color;
+      background-image: url('../image/icons/checkbox-icon.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
 }
 
 .agreement-capture {
@@ -200,40 +221,17 @@
   letter-spacing: 0.03em;
 }
 
-.agreement-wrapper::before {
-  display: inline-block;
-  content: '';
-  position: absolute;
-  left: 0;
-  width: 16px;
-  height: 15px;
-  border: 2px solid #000000;
-  border-radius: 2px;
-  transition: border-color 250ms $timing-function,
-    background-color 250ms $timing-function;
-}
-
 .checkbox {
   position: absolute;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
-.checkbox:checked + .agreement-wrapper::before {
-  background-color: $accent-color;
-  border-color: $accent-color;
-  background-image: url('../image/icons/checkbox-icon.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-}
+
 .submit-bt {
   margin-left: auto;
   margin-right: auto;
   padding: 10px 55px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   transition: background-color 250ms $timing-function;
-}
-.subcripe-button:hover,
-.subcripe-button:focus {
-  background-color: #188ce8;
 }

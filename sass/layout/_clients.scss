@@ -25,23 +25,23 @@
   height: 90px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  &:hover,
+  &:focus {
+    border-color: $accent-color;
+  }
 }
 .clients-item:not(:last-child) {
   margin-right: 30px;
 }
-.clients-link:hover,
-.clients-link:focus {
-  border-color: $accent-color;
-}
+
 .client-icon {
   transition: fill 250ms $timing-function;
 
   fill: $icon-color;
-}
-
-.clients-link:hover > .client-icon {
-  fill: $accent-color;
-}
-.clients-link:focus > .client-icon {
-  fill: $accent-color;
+  .clients-link:hover > & {
+    fill: $accent-color;
+  }
+  .clients-link:focus > & {
+    fill: $accent-color;
+  }
 }

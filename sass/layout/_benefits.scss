@@ -6,9 +6,9 @@
 }
 .benefits-items {
   width: 270px;
-}
-.benefits-items:not(:last-child) {
-  margin-right: 30px;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .benefits-title {
@@ -20,20 +20,20 @@
 
   color: $title-color;
 }
-.benefit-icon {
+.benefits-icon {
   width: 70px;
   height: 70px;
   background-color: $filbut-team-bg;
-}
-.benefit-icon-bg {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 30px;
-  width: 270px;
-  height: 120px;
-  background-color: $filbut-team-bg;
-  border-radius: 4px;
+  &-bg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    width: 270px;
+    height: 120px;
+    background-color: $filbut-team-bg;
+    border-radius: 4px;
+  }
 }
 
 .benefits-description {

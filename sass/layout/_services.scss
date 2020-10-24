@@ -9,11 +9,11 @@
 
 .services-item {
   position: relative;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
-.services-item:not(:last-child) {
-  margin-right: 30px;
-}
 .services-title {
   font-weight: 700;
   font-size: 36px;

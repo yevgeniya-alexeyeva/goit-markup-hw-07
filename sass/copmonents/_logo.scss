@@ -5,7 +5,10 @@
   line-height: 1.192;
   letter-spacing: 0.03em;
   color: $accent-color;
-}
-.logo-in-header {
-  color: $logo-color;
+  &-in-header {
+    color: $logo-color;
+  }
+  &-in-footer {
+    color: $hero-color;
+  }
 }
